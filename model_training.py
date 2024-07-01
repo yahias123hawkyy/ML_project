@@ -3,26 +3,22 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
-
+import joblib
 import pandas as pd
 
 def trainTheModel():
     dataset = pd.read_csv('featured_data.csv')
 
-    # Drop the 'Unnamed: 0' and 'CustomerID' columns if they exist
     if 'Unnamed: 0' in dataset.columns:
         dataset.drop(columns=['Unnamed: 0'], inplace=True)
     if 'CustomerID' in dataset.columns:
         dataset.drop(columns=['CustomerID'], inplace=True)
 
-    # Convert 'Churn' column to binary (1 for 'Yes', 0 for 'No')
     dataset['Churn'] = dataset['Churn'].map({'Yes': 1, 'No': 0})
 
-    # Define the features (X) and the target (y)
     X = dataset.drop(columns=['Churn'])
     y = dataset['Churn']
 
-    # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
     # Initialize the models
@@ -36,6 +32,12 @@ def trainTheModel():
     decision_tree.fit(X_train, y_train)
     random_forest.fit(X_train, y_train)
     gradient_boosting.fit(X_train, y_train)
+
+    # Save the models
+    joblib.dump(log_reg, 'log_reg_model.pkl')
+    joblib.dump(decision_tree, 'decision_tree_model.pkl')
+    joblib.dump(random_forest, 'random_forest_model.pkl')
+    joblib.dump(gradient_boosting, 'gradient_boosting_model.pkl')
 
     # Define a function to evaluate the models
     def evaluate_model(model, X_test, y_test):
@@ -69,5 +71,4 @@ def trainTheModel():
     for model, name in zip(models, model_names):
         cv_accuracy, cv_precision, cv_recall, cv_f1, cv_roc_auc = cross_validate_model(model, X, y)
         print(f"{name} - CV Accuracy: {cv_accuracy.mean():.4f}, CV Precision: {cv_precision.mean():.4f}, CV Recall: {cv_recall.mean():.4f}, CV F1-Score: {cv_f1.mean():.4f}, CV ROC-AUC: {cv_roc_auc.mean():.4f}")
-
 

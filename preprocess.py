@@ -45,6 +45,3 @@ def preprocessTheDataSet(dataset):
 
     print(f"Cleaned dataset saved to '{cleaned_dataset_path}'")
 
-# Example usage
-# dataset = pd.read_csv('your_dataset.csv')
-# preprocessTheDataSet(dataset)

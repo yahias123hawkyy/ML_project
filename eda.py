@@ -78,5 +78,5 @@ def exploreInDepthDataSet(dataset):
         for feature in categorical_features:
             if feature != target_variable:
                 contingency_table = pd.crosstab(dataset[feature], dataset[target_variable])
-                chi2, p_val, dof, ex = chi2_contingency(contingency_table)
+                chi2, p_val= chi2_contingency(contingency_table)
                 print(f'Chi-square test for {feature} by {target_variable}: chi2={chi2:.4f}, p-value={p_val:.4f}')

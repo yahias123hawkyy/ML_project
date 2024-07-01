@@ -386,11 +386,7 @@
 384,1927e290-969d-418c-ba8f-e711b5bd6900,46.0,Male,30,DSL,Yes,No,Month-to-month,Mailed check,87.1,2621.62,No,No,Yes,No,No
 385,580eddf6-d76f-4d3e-9942-95dc86597569,66.0,Male,18,DSL,Yes,No,Month-to-month,Bank transfer,39.61,723.49,No,Yes,Yes,No,No
 386,f2f896a9-af6c-4ff4-b8e8-beb7ae438511,63.0,Male,60,Fiber optic,Yes,No,Month-to-month,Electronic check,68.03,4064.39,Yes,Yes,Yes,No,No
-387,c50065c4-c90a-4292-9d28-ad7a9a4fc67f,48.0,Female,15,None,Yes,No,Two year,Electronic check,80.27,1201.0,Yes,No,No,Yes,No
-388,48f489b7-5b74-4e0e-8e09-0dcc5b3f3add,52.0,Male,4,None,Yes,No,Month-to-month,Credit card,113.21,462.77,No,No,No,No,Yes
-389,0edcda6f-0d2f-41d7-9c7d-babb5220e9d6,50.0,Male,63,Fiber optic,Yes,No,One year,Bank transfer,36.94,2317.98,Yes,No,No,No,No
-390,0a6437e5-4e84-4394-ba75-fcb9b3300697,69.0,Male,40,DSL,No,Yes,Month-to-month,Electronic check,71.54,2873.79,Yes,Yes,No,Yes,No
-391,90bd6e98-b855-4d19-9fe3-ffd3ee481a4c,38.0,Female,9,None,Yes,No,Month-to-month,Mailed check,35.78,340.12,Yes,Yes,Yes,No,No
+387,c50065c4-c90a-4292-9d28-ad7a9a4fc67f,48.0,Female,15,None,Yes,No,Two year,Electronic check,Electronic,35.78,340.12,Yes,Yes,Yes,No,No
 392,8a52e522-b14d-496a-b8ab-138ac70f0812,49.0,Female,9,Fiber optic,Yes,No,Two year,Mailed check,64.38,591.33,No,Yes,Yes,No,No
 393,6f34da84-d4f0-426f-8ac7-6e9c738ea70e,,Female,26,DSL,Yes,Yes,One year,Credit card,40.01,1046.88,No,No,No,No,No
 394,33210ab7-4391-4cfb-8df2-ed3a08dad464,50.0,Female,4,None,Yes,Yes,Two year,Electronic check,103.62,410.0,No,No,No,No,Yes
